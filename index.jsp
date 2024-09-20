@@ -6,7 +6,7 @@
     <title>Simple JSP Page</title>
 </head>
 <body>
-    <h1>Sample JSP Page</h1>
+    <h1>Simple JSP Page</h1>
 
     <!-- Input Text Box -->
     <form action="" method="post">
@@ -23,10 +23,20 @@
     <!-- Display input text after submission -->
     <% 
         String inputText = request.getParameter("inputText");
-        if (inputText != null && !inputText.isEmpty()) {
+        if (inputText != null) {
+            if (inputText.isEmpty()) {
     %>
-        <h3><%= inputText %></h3>
+        <h3 style="color: Blue;">No input provided!</h3>
     <% 
+            } else if (inputText.matches(".*\\d.*")) {
+    %>
+        <h3 style="color: Red;">Input contains numbers, not displayed.</h3>
+    <% 
+            } else {
+    %>
+        <h3 style="color: Green;"><%= inputText %></h3>
+    <% 
+            }
         }
     %>
 
