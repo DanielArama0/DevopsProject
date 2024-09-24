@@ -30,7 +30,7 @@
     <% 
             } else if (inputText.matches(".*\\d.*")) {
     %>
-        <h3 style="color: Red;">Input contains numbers, not displayed</h3>
+        <h3 style="color: Red;">Input contains numbers, not displayed.</h3>
     <% 
             } else {
     %>
