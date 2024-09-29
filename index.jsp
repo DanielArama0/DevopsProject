@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Simple JSP Page</h1>
-
+    <h1>Simple JSP Page</h1>
     <!-- Input Text Box -->
     <form action="" method="post">
         <label for="inputText">Enter some text:</label>
